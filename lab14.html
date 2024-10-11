@@ -7,27 +7,27 @@
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <div class="profile">
+    <div class="profile" id="profile">
         <div class="notify">
             <p>1</p>
         </div>
     </div>
 <h1 id="username">Username, Hi!</h1>
-<label>Set username</label><input id="input-name"><button>Set</button>
-<label>Set username</label><input id="input-url" type="text"><button>Set</button>
+<label>Set username</label><input id="input-name"><button onclick="setName()">Set</button>
+<label>Set Profile</label><input id="input-url" type="text"><button onclick="setImg()">Set</button>
 
 <script>
-    const name = document.getElementById("username")
-    const input = document.getElementById("Input")
-    const profile = document.getElementById("profile dis")
-    const inputURL = document.getElementById("input-url")
-    const table = document.getElementById("id")
+    const name = document.getElementById("username");
+    const inputName = document.getElementById("input-name");
+    const profile = document.getElementById("profile");
+    const inputURL = document.getElementById("input-url");
+    const table = document.getElementById("table");
     function setName(){
         name.textContent = inputName.value + ", oh";
         inputName.value = "";
     }
     function setImg(){
-        profile.style.backgroundImage = "url(" + importURL.value
+        profile.style.backgroundImage = "url(" + inputURL.value
     }
     function addRow(){
         const row = document.getElementById("tr");
@@ -37,7 +37,7 @@
         cell2.textContent = "4641311346"
         row.appendChild(cell1);
         row.appendChild(cell2);
-        table.appendChild(row)
+        table.appendChild(row);
     }
 </script>
 </body>
