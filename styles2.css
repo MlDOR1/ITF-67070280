@@ -1,0 +1,21 @@
+.profile{
+    width: 300px;
+    height: 300px;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png);
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.notify{
+    width: 50px;
+    height: 50px;
+    background-color: crimson;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}

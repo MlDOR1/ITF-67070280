@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="profile">
+        <div class="notify">
+            <p>1</p>
+        </div>
+    </div>
+<h1 id="username">Username, Hi!</h1>
+<label>Set username</label><input id="input-name"><button>Set</button>
+<label>Set username</label><input id="input-url" type="text"><button>Set</button>
+
+<script>
+    const name = document.getElementById("username")
+    const input = document.getElementById("Input")
+    const profile = document.getElementById("profile dis")
+    const inputURL = document.getElementById("input-url")
+    const table = document.getElementById("id")
+    function setName(){
+        name.textContent = inputName.value + ", oh";
+        inputName.value = "";
+    }
+    function setImg(){
+        profile.style.backgroundImage = "url(" + importURL.value
+    }
+    function addRow(){
+        const row = document.getElementById("tr");
+        const cell1 = document.getElementById("td");
+        const cell2 = document.getElementById("td");
+        cell1.textContent = "JKFjsdfkjkfja"
+        cell2.textContent = "4641311346"
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        table.appendChild(row)
+    }
+</script>
+</body>
+</html>
