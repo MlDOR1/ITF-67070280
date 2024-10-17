@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Phone Book</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-    <div class="profile" id="profile">
-        <div class="notify">
-            <p>1</p>
-        </div>
+    <h1>
+        <span class="username" id="username">Witchapas Poodamrongpan 67070280</span> Phone Book
+    </h1>
+    <div class="avatar" id="avatar">
+        <div class="notification">1</div>
     </div>
-<h1 id="username">Username, Hi!</h1>
-<label>Set username</label><input id="input-name"><button onclick="setName()">Set</button>
-<label>Set Profile</label><input id="input-url" type="text"><button onclick="setImg()">Set</button>
+    
+    <div>
+        <input type="text" id="usernameInput" placeholder="Enter Username">
+        <button onclick="setUsername()">SET</button>
+    </div>
+    <div>
+        <input type="text" id="avatarInput" placeholder="Enter Image URL">
+        <button onclick="setAvatar()">SET</button>
+    </div>
+    
+    <div>
+        <input type="text" id="nameInput" placeholder="Name">
+        <input type="tel" id="phoneInput" placeholder="Phone Number">
+        <button onclick="addContact()">ADD</button>
+        <button onclick="exportContacts()">EXPORT</button>
+    </div>
+    
+    <table id="contactTable">
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+    </table>
 
-<script>
-    const name = document.getElementById("username");
-    const inputName = document.getElementById("input-name");
-    const profile = document.getElementById("profile");
-    const inputURL = document.getElementById("input-url");
-    const table = document.getElementById("table");
-    function setName(){
-        name.textContent = inputName.value + ", oh";
-        inputName.value = "";
-    }
-    function setImg(){
-        profile.style.backgroundImage = "url(" + inputURL.value
-    }
-    function addRow(){
-        const row = document.getElementById("tr");
-        const cell1 = document.getElementById("td");
-        const cell2 = document.getElementById("td");
-        cell1.textContent = "JKFjsdfkjkfja"
-        cell2.textContent = "4641311346"
-        row.appendChild(cell1);
-        row.appendChild(cell2);
-        table.appendChild(row);
-    }
-</script>
+    <script src="script.js"></script>
 </body>
 </html>
